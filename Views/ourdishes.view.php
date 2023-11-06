@@ -1,0 +1,39 @@
+<?php //session_start();?> 
+<?php require('partials/head.php')?> 
+  <!-- header / hero -->
+  <!-- navigation -->
+<?php require('partials/nav.php')?> 
+  <!-- Trips -->
+<?php require('partials/banner.php')?> 
+<section class="gallery" >
+        <li>
+            <a href="/reservation" class="text-blue-500 hover:underline">
+            Review all our dishes
+            </a>
+        </li>
+        <li>
+            <a href="/" class="text-blue-500 hover:underline">
+            Manage our dishes
+            </a>
+        </li>
+
+  </section>
+
+<section class="gallery" id="gallery">
+
+    <h1>Below are some of our dishes</h1>
+    <div class="galleryWrap">
+      <img src="images/vegetable-skewer-3317060_1280.jpg" alt="ocean image">
+      <img src="images/food-712665_1280.jpg" alt="ocean image">
+      <img src="images/cake-1971552_1280.jpg" alt="ocean image">
+      <img src="images/asparagus-2169305_1280.jpg" alt="ocean image">
+      <img src="images/olive-oil-968657_1280.jpg" alt="ocean image">
+      <img src="images/pizza-3007395_1280.jpg" alt="ocean image">
+      <img src="images/pasta-1854245_1280.jpg" alt="ocean image">
+      <img src="images/salmon-1238248_1280.jpg" alt="ocean image">
+    </div>
+  </section>
+  <!-- Footer -->
+<!-- Contact Info -->
+<?php //require('partials/footer.contact.php')?>
+<?php require('partials/footer.php')?>
