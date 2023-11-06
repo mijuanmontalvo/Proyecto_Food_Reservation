@@ -7,12 +7,12 @@
 <?php require('partials/banner.php')?> 
 <section class="gallery" >
         <li>
-            <a href="/reservation" class="text-blue-500 hover:underline">
+            <a href="/manageourdishes" class="text-blue-500 hover:underline">
             Review all our dishes
             </a>
         </li>
         <li>
-            <a href="/" class="text-blue-500 hover:underline">
+            <a href="/manageourdishes" class="text-blue-500 hover:underline">
             Manage our dishes
             </a>
         </li>
