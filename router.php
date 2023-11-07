@@ -10,6 +10,7 @@ $routes =[
     '/ourdishes'=>'controllers/ourdishes.php',
     '/manageourdishes'=>'controllers/manageourdishes.php',
     '/addnewdish'=>'controllers/addnewdish.php',
+    '/insertnewdish'=>'controllers/insertnewdish.php',
     '/reservation'=>'controllers/reservation.php',
     '/reservationkitchen'=>'controllers/reservationkitchen.php',
     '/reservationsmade'=>'controllers/reservationsmade.php',
