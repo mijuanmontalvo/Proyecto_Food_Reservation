@@ -42,7 +42,18 @@ if ($conn->connect_error) {
 }
 
 // Consulta para seleccionar todos los datos de la tabla
-$sql = "SELECT * FROM reservation order by ID desc";
+$sql = "SELECT 
+r.ID as ID,
+u.name as Username, 
+d.name as Name_dish, 
+r.DateReservation as Date_reservation, 
+r.NumberDish as NumberDish, 
+r.Observation as Observation,
+r.Estate as Estate
+FROM reservation r
+JOIN user u ON r.UserID = u.id
+JOIN dish d ON r.DishID = d.id
+ORDER BY ID desc;";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -52,9 +63,9 @@ if ($result->num_rows > 0) {
     
     echo "<tr>";
     echo "<td>" . $row['ID'] . "</td>";
-    echo "<td>" . $row['UserID'] . "</td>";
-    echo "<td>" . $row['DishID'] . "</td>";
-    echo "<td>" . $row['DateReservation'] . "</td>";
+    echo "<td>" . $row['Username'] . "</td>";
+    echo "<td>" . $row['Name_dish'] . "</td>";
+    echo "<td>" . $row['Date_reservation'] . "</td>";
     echo "<td>" . $row['NumberDish'] . "</td>";
     echo "<td>" . $row['Observation'] . "</td>";
     echo "<td>" . $row['Estate'] . "</td>";
