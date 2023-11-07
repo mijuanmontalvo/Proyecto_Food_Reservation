@@ -5,6 +5,7 @@
 <?php require('partials/nav.php')?> 
   <!-- Trips -->
 <?php require('partials/banner.php')?> 
+<?php /*
 <section class="gallery" >
         <li>
             <a href="/manageourdishes" class="text-blue-500 hover:underline">
@@ -18,7 +19,24 @@
         </li>
 
   </section>
+*/?>
 
+  <ul class="tripList trips">
+      <li>
+        
+        <h3>Review all our dishes</h3>
+        
+        <a href="/manageourdishes">Continue...<i class="fas fa-angle-double-right"></i></a>
+      </li>
+      <li>
+        
+        <h3>Manage our dishes</h3>
+        
+        <a href="/manageourdishes">Continue...<i class="fas fa-angle-double-right"></i></a>
+      </li>
+
+    </ul>
+<?php /*
 <section class="gallery" id="gallery">
 
     <h1>Gallery of our dishes</h1>
@@ -33,6 +51,7 @@
       <img src="images/salmon-1238248_1280.jpg" alt="ocean image">
     </div>
   </section>
+  */?>
   <!-- Footer -->
 <!-- Contact Info -->
 <?php //require('partials/footer.contact.php')?>
