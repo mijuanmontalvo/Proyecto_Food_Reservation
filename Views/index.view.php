@@ -98,14 +98,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "SELECT * FROM food_reservation.user where UserName = '$username' and Password = '$password'";
     $result = $conn->query($sql);
-
+    $row = $result->fetch_assoc();
+    echo $row['ID'];
     if ($result->num_rows > 0) {
         $_SESSION['username'] = $username; // Almacenar nombre de usuario en la sesión
+        $_SESSION['ID']=$row['ID'];
+        $_SESSION['UserType']=$row['UserType'];
+        $_SESSION['Name']=$row['Name'];
+        $_SESSION['RoomNumber']=$row['RoomNumber'];
+        $_SESSION['email']=$row['email'];
         header("location: /home ");
     } else {
         echo "<script>alert('Usuario o contraseña incorrectos.');</script>";
         echo "<script>window.location.href = '/';</script>";
-
+        
     }
 
     $conn->close();
