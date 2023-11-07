@@ -90,16 +90,8 @@ else
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $servername = "localhost";
-    $username = "food_reservation";
-    $password = "1234";
-    $dbname = "food_reservation";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-        die("Conexión fallida: " . $conn->connect_error);
-    }
+    include '../functions.php';
+    $conn = conectarBD();
 
     $username = $_POST['username'];
     $password = $_POST['password'];
