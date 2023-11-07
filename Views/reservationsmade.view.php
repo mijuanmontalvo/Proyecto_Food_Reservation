@@ -40,10 +40,11 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Conexión fallida: " . $conn->connect_error);
 }
-
+$userID=$_SESSION['ID'];
 // Consulta para seleccionar todos los datos de la tabla
 $sql = "SELECT 
 r.ID as ID,
+u.ID as UserID,
 u.name as Username, 
 d.name as Name_dish, 
 r.DateReservation as Date_reservation, 
@@ -53,6 +54,7 @@ r.Estate as Estate
 FROM reservation r
 JOIN user u ON r.UserID = u.id
 JOIN dish d ON r.DishID = d.id
+WHERE UserID = '$userID'
 ORDER BY ID desc;";
 $result = $conn->query($sql);
 
