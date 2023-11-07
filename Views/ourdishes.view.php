@@ -21,7 +21,7 @@
 
 <section class="gallery" id="gallery">
 
-    <h1>Below are some of our dishes</h1>
+    <h1>Gallery of our dishes</h1>
     <div class="galleryWrap">
       <img src="images/vegetable-skewer-3317060_1280.jpg" alt="ocean image">
       <img src="images/food-712665_1280.jpg" alt="ocean image">
