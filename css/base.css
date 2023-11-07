@@ -857,11 +857,12 @@ th {
   padding: 20px 15px;
   font-weight: 700;
   text-transform: uppercase;
-  color: white;
+  color: #36bae6;
 }
 td{
   padding: 15px ;
   border-bottom: solid 1px black;
+  
 }
 
 .tdedit{
