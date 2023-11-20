@@ -1,5 +1,5 @@
 <section class="navWrap">
-    <img src="images/female-1801515.svg" alt="MAR logo" class="logo">
+    <img src="images/logo2.png" alt="MAR logo" class="logo">
     <input type="checkbox" id="navToggle" class="navToggle">
     <label for="navToggle" class="navToggleLabel"><span></span></label>
     <nav>

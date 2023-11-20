@@ -7,6 +7,7 @@ body{
     flex-direction: column;
 }
 
+
 *{
     font-family: 'Lato', sans-serif;
     font-family: 'Open Sans', sans-serif;
@@ -14,11 +15,31 @@ body{
     box-sizing: border-box;
 }
 
+.divimage{
+    display: block;
+
+    text-align: center;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.logo {
+    max-width: 100px;
+
+  }
+
 form{
     width: 600px;
     border: 2px solid black;
-    padding: 6rem;
-    background-color: #494746;
+    padding: 2rem 4rem 4rem;
+    background-color: #223055;
     border: none;
     border-radius: 20px;
     color: aliceblue;
@@ -68,7 +89,9 @@ button{
     width: 60%;
     border-radius: 5px;
     margin-right: 10px;
+    font-size: 16px;
 }
+
 button:hover{
     background-color: white;
     color: black;
@@ -79,9 +102,9 @@ a{
     margin-left: 10px;
     padding: .5rem;
     text-decoration: none;
-    color: #2579AF;
+    color: #fff;
 
 }
 a:hover{
-    color: white;
+    color: #2579AF;
 }

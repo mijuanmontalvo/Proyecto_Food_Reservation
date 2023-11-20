@@ -37,19 +37,31 @@ if (password_verify($user_input_password, $hashed_password_from_database)) {
 */
 
     ?>
-    <form name="frmLogin" method="post">
-    <h1>Log in</h1> 
-    <hr>   
-        
-        <label>User</label>
-        <input type="text" name="username" placeholder="Enter your username">
-        
-        <label>Password</label>
-        <input type="password" name="password" placeholder="Enter your password">
-        <hr>
-        <button type="submit">Log in</button>
-        <a href="registrarcuenta">Create Account</a>
-    </form>
+
+
+
+
+
+
+        <div class="login-container">
+
+            <form name="frmLogin" method="post">
+            <div class="divimage">
+            <img src="images/logo2.png" alt="MAR logo" class="logo">
+            </div>
+            <h1>Log in</h1> 
+            <hr>   
+                
+                <label>User</label>
+                <input type="text" name="username" placeholder="Enter your username">
+                
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter your password">
+                <hr>
+                <button type="submit">Log in</button>
+                <a href="registrarcuenta">Create Account</a>
+            </form>
+        </div>
     </body>
 </html>
 
