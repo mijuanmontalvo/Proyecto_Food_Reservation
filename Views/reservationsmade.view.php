@@ -1,4 +1,4 @@
-<?php //session_start();?> 
+<?php // session_start();?> 
 <?php require('partials/head.php')?> 
   <!-- header / hero -->
   <!-- navigation -->
@@ -28,7 +28,7 @@
   </tr>
  
 <?php
-    $servername = "localhost";
+ /*   $servername = "localhost";
     $username = "food_reservation";
     $password = "1234";
     $dbname = "food_reservation";
@@ -39,7 +39,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Verificar la conexión
 if ($conn->connect_error) {
   die("Conexión fallida: " . $conn->connect_error);
-}
+}*/
+
+include 'db_connect.php';
+
 $userID=$_SESSION['ID'];
 // Consulta para seleccionar todos los datos de la tabla
 $sql = "SELECT 

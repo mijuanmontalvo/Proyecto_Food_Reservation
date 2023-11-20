@@ -26,18 +26,10 @@
   </tr>
  
 <?php
-    $servername = "localhost";
-    $username = "food_reservation";
-    $password = "1234";
-    $dbname = "food_reservation";
-
 // Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+include 'db_connect.php';
 
-// Verificar la conexión
-if ($conn->connect_error) {
-  die("Conexión fallida: " . $conn->connect_error);
-}
+
 
 // Consulta para seleccionar todos los datos de la tabla
 $sql = "SELECT ID, name, description, price, image FROM dish order by ID desc";
