@@ -17,7 +17,7 @@ $sql = "INSERT INTO food_reservation.user (UserType, Name, RoomNumber, email, Us
 if ($conn->query($sql) === TRUE) {
     // Redireccionar a la página de inicio de sesión
     $_SESSION['name_usuario'] = $name_usuario;
-    header("Location: /home");
+    header("Location: /");
     exit();
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
