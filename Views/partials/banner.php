@@ -1,10 +1,8 @@
 <section class="trips" id="trips">
-<article>
+    <article>
       
-      <h1>Welcome <?php echo $_SESSION['username'] ?> to </h1>
-      
-      
-      </article>
+      <h2>Welcome <?php echo $_SESSION['username'] ?> to </h2>
+    </article>
     <article>
    
       <h1><?= $heading?></h1>
