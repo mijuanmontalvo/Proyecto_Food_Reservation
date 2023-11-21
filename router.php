@@ -14,6 +14,7 @@ $routes =[
     '/reservation'=>'controllers/reservation.php',
     '/reservationkitchen'=>'controllers/reservationkitchen.php',
     '/reservationsmade'=>'controllers/reservationsmade.php',
+    '/editdish'=>'controllers/editdish.php',
 ];
 
 function routeToController($uri, $routes){
