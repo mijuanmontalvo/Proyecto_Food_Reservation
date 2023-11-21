@@ -68,9 +68,9 @@ if ($result->num_rows > 0) {
     echo "<td>" . $row['ID'] . "</td>";
     echo "<td>" . $row['name'] . "</td>";
     echo "<td>" . $row['description'] . "</td>";
-    echo "<td>" . $row['price'] . "</td>";
+    echo "<td>" . number_format($row['price'],2) . "</td>";
     echo "<td><img src='data:image/jpeg;base64," . base64_encode($row['image']) . "'/></td>";
-    echo "<td>" ." <a href=/editdish?id=$row[ID]>Edit</a> | <a href=/editdish>Delete</a>" . "</td>";
+    echo "<td>" ." <a href=/editdish?id=$row[ID]>Edit</a> | <a href=/deletedish>Delete</a>" . "</td>";
     echo "</tr>";
   }
 } else {
