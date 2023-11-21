@@ -5,21 +5,7 @@
 <?php require('partials/nav.php')?> 
   <!-- Trips -->
 <?php require('partials/banner.php')?> 
-<?php /*
-<section class="gallery" >
-        <li>
-            <a href="/manageourdishes" class="text-blue-500 hover:underline">
-            Review all our dishes
-            </a>
-        </li>
-        <li>
-            <a href="/manageourdishes" class="text-blue-500 hover:underline">
-            Manage our dishes
-            </a>
-        </li>
 
-  </section>
-*/?>
 
   <ul class="tripList trips">
       <li>
@@ -36,22 +22,75 @@
       </li>
 
     </ul>
-<?php /*
-<section class="gallery" id="gallery">
 
-    <h1>Gallery of our dishes</h1>
-    <div class="galleryWrap">
-      <img src="images/vegetable-skewer-3317060_1280.jpg" alt="ocean image">
-      <img src="images/food-712665_1280.jpg" alt="ocean image">
-      <img src="images/cake-1971552_1280.jpg" alt="ocean image">
-      <img src="images/asparagus-2169305_1280.jpg" alt="ocean image">
-      <img src="images/olive-oil-968657_1280.jpg" alt="ocean image">
-      <img src="images/pizza-3007395_1280.jpg" alt="ocean image">
-      <img src="images/pasta-1854245_1280.jpg" alt="ocean image">
-      <img src="images/salmon-1238248_1280.jpg" alt="ocean image">
-    </div>
+
+
+
+
+    <section class="gallery" >
+            <div class="addnewdish">
+            <a href="/addnewdish"  class="text-blue-500 hover:underline boton">
+            Add a new dish
+            </a>
+            </div> 
+
+        <br>
+<hr>
+<br>
+<h2>Dish Table</h2>
+<hr>
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price ($)</th>
+    <th>Image</th>
+    <th>Operaciones</th>
+  </tr>
+ 
+<?php
+// Crear conexión
+include 'db_connect.php';
+
+
+
+// Consulta para seleccionar todos los datos de la tabla
+$sql = "SELECT ID, name, description, price, image FROM dish order by ID desc";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // Imprimir los datos en una tabla
+  
+  while($row = $result->fetch_assoc()) {
+    
+    echo "<tr>";
+    echo "<td>" . $row['ID'] . "</td>";
+    echo "<td>" . $row['name'] . "</td>";
+    echo "<td>" . $row['description'] . "</td>";
+    echo "<td>" . $row['price'] . "</td>";
+    echo "<td><img src='data:image/jpeg;base64," . base64_encode($row['image']) . "'/></td>";
+    echo "<td>" ." <a href=/editdish?id=$row[ID]>Edit</a> | <a href=/editdish>Delete</a>" . "</td>";
+    echo "</tr>";
+  }
+} else {
+  echo "0 resultados";
+}
+$conn->close();
+?>
+
+</table>
+
   </section>
-  */?>
+
+
+    
+<?php 
+
+
+
+
+?>
   <!-- Footer -->
 <!-- Contact Info -->
 <?php //require('partials/footer.contact.php')?>
