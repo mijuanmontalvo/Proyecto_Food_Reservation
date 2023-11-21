@@ -587,6 +587,27 @@ section.problem {
   
 }
 
+.addnewdish {
+  
+  text-align: center;
+}
+
+        /* Estilos para el botón */
+        .boton {
+          display: inline-block;
+          padding: 10px 20px;
+          text-decoration: none;
+          background-color: #4caf50; /* Color de fondo del botón */
+          color: #fff; /* Color del texto del botón */
+          border-radius: 5px; /* Bordes redondeados */
+          font-weight: bold;
+      }
+
+      /* Cambiar el estilo cuando se pasa el ratón sobre el botón */
+      .boton:hover {
+          background-color: #45a049; /* Color de fondo cuando se pasa el ratón */
+      }
+
 .gallery h1 {
   text-align: center;
   color: #223055;
