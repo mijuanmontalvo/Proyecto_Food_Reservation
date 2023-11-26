@@ -9,21 +9,17 @@
 <?php 
 include 'db_connect.php';
 
-
+echo $ID;
 
 // Consulta para seleccionar todos los datos de la tabla
 $sql = "DELETE FROM dish where ID=$ID";
-$result = $conn->query($sql);
+$result = mysqli_query ($conn, $sql);
 
-if ($result->num_rows > 0) {
-$row = $result->fetch_assoc();
-$name=$row['name'];
-$description=$row['description'];
-$price=$row['price'];
-$image=$row['image'];
-$image=base64_encode($image);
+
+if ($result) {
+    header("Location: /ourdishes");
 } else {
-    echo "0 resultados";
+    echo "No se pudo borrar";
   }
   $conn->close();
 

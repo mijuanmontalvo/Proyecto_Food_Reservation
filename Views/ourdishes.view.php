@@ -1,4 +1,5 @@
 <?php //session_start();?> 
+
 <?php require('partials/head.php')?> 
   <!-- header / hero -->
   <!-- navigation -->
@@ -28,11 +29,21 @@
 
 
     <section class="gallery" >
+
+    <?php
+if ($_SESSION['UserType']=="Kitchen"){
+?>
             <div class="addnewdish">
             <a href="/addnewdish"  class="text-blue-500 hover:underline boton">
             Add a new dish
             </a>
             </div> 
+
+            <?php
+} else {
+
+}
+?>
 
         <br>
 <hr>
@@ -46,12 +57,13 @@
     <th>Description</th>
     <th>Price ($)</th>
     <th>Image</th>
-    <th>Operaciones</th>
+    <th>Operations</th>
   </tr>
  
 <?php
 // Crear conexión
 include 'db_connect.php';
+//echo $_SESSION['UserType'];
 
 
 
@@ -70,13 +82,23 @@ if ($result->num_rows > 0) {
     echo "<td>" . $row['description'] . "</td>";
     echo "<td>" . number_format($row['price'],2) . "</td>";
     echo "<td><img src='data:image/jpeg;base64," . base64_encode($row['image']) . "'/></td>";
-    echo "<td>" ." <a href=/editdish?id=$row[ID]>Edit</a> | <a href=/deletedish>Delete</a>" . "</td>";
+
+    if ($_SESSION['UserType']=="Kitchen"){
+    echo "<td>" ." <a href=/editdish?id=$row[ID]>Edit</a> | 
+                   <a href=/deletedish?id=$row[ID] class=table__item__link>Delete</a>" . "</td>";
+    }else{
+      echo "<td>" ." <a href=/editdish?id=$row[ID]>Reserve</a>" . "</td>";
+    }
     echo "</tr>";
+
+    
   }
 } else {
   echo "0 resultados";
 }
 $conn->close();
+
+
 ?>
 
 </table>
