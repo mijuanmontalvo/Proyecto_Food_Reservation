@@ -7,7 +7,7 @@
   <!-- Trips -->
 <?php require('partials/banner.php')?> 
 
-
+<?php /* ?>
     <ul class="tripList trips">
       <li>
         
@@ -24,7 +24,9 @@
 
     </ul>
 
-
+<?php
+*/    
+?>
 
 
 
