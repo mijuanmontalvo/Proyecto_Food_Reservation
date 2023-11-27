@@ -4,8 +4,14 @@
   <!-- navigation -->
 <?php require('partials/nav.php')?> 
   <!-- Trips -->
-<?php require('partials/banner.php')?> 
+<?php require('partials/banner.php')?>
+
 <section class="gallery" >
+<a style="text-align: end; display: inline-block; width: 100%; " href="/ourdishes"><< Back</a> 
+<br>
+<br> 
+<br>
+<hr>
         <h2>
         Enter the data of the new plate
             
