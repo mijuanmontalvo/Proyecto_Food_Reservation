@@ -33,6 +33,10 @@ $image=base64_encode($image);
 ?> 
 
 <section class="gallery" >
+<a style="text-align: end; display: inline-block; width: 100%; " href="/ourdishes"><< Back</a> 
+<br>
+<br>
+<hr>
         <h2>
         Edit the data of the plate:
             
