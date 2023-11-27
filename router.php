@@ -19,6 +19,7 @@ $routes =[
     '/deletedish'=>'controllers/deletedish.php',
     '/editreservation'=>'controllers/editreservation.php',
     '/inserteditreservation'=>'controllers/insertar_editreservation.php',
+    '/deletereservation'=>'controllers/deletereservation.php',
     
 
 ];
