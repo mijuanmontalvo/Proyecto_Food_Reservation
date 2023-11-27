@@ -20,7 +20,6 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 $row = $result->fetch_assoc();
 
-$ID=$row['ID'];
 $UserID=$row['UserID'];
 $DishID=$row['DishID'];
 $DateReservation=$row['DateReservation'];
@@ -67,7 +66,10 @@ if ($result1->num_rows > 0) {
       <h2>Enter the new details of your reservation</h2>
       <hr>
       <br>
-      <form action="/controllers/insertar_editreservation.php" method="post">
+      <form action="inserteditreservation" method="post">
+      <input type="hidden" name="ID" value="<?php echo $ID;?>">
+      <input type="hidden" name="UserID" value="<?php echo $UserID;?>">
+        <br>
       <label for="plato">Name of dish:</label><br>
     <select id="name_dish" name="name_dish">
         <!-- Opciones de platos se pueden cargar dinámicamente desde la base de datos -->
