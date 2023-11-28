@@ -516,13 +516,6 @@ section.problem {
   margin-right: 1rem;
 }
 
-.action ul {
-
- }
-
-.action ul li {
-  
-} 
 
 .action ul li {
   border: solid 1px #dedede;
@@ -1156,9 +1149,6 @@ td{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr .25fr;
-  }
-
-  .contact {
   }
 
   .social h3 {
