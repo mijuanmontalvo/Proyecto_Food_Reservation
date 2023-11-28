@@ -10,6 +10,9 @@
 
   <!-- Trips -->
   <?php require('partials/banner.php')?> 
+
+
+  <?php /* ?> 
   <ul class="tripList trips">
       <li>
         
@@ -26,7 +29,7 @@
 
     </ul>
 
-
+<?php */ ?> 
     <section class="gallery" >
 
 <?php
@@ -115,9 +118,11 @@ if ($result->num_rows > 0) {
     echo "<td>" . $row['NumberDish'] . "</td>";
     echo "<td>" . $row['Observation'] . "</td>";
     echo "<td>" . $row['Estate'] . "</td>";
-    echo "<td>" ." <a href=/editreservation?id=$row[ID]>Edit</a> | 
-                  <a href=/deletereservation?id=$row[ID] class=table__item__link>Delete</a>" . "</td>";
 
+
+      echo "<td>" ." <a href=/editreservation?id=$row[ID]>Edit</a> | 
+      <a href=/deletereservation?id=$row[ID] class=table__item__link>Delete</a>" . "</td>";
+    
     echo "</tr>";
 
     

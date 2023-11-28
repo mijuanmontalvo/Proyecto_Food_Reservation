@@ -9,16 +9,26 @@ $name_dish = $_POST['name_dish'];
 $reservation_date = $_POST['reservation_date'];
 $number_dishes = $_POST['number_dishes'];
 $observation = $_POST['observation'];
-$estate="Initialized";
+$estate=$_POST['estate'];
 
-echo $ID." ".$userID." ".$name_dish." ".$reservation_date." ".$number_dishes." ".$observation." ".$estate;
+echo $estate.$ID." ".$userID." ".$name_dish." ".$reservation_date." ".$number_dishes." ".$observation." ".$estate;
 
+
+
+      if ($_SESSION['UserType']=="Kitchen"){
+        $sql = "UPDATE food_reservation.reservation 
+        SET DishID=$name_dish, DateReservation= '$reservation_date', NumberDish= $number_dishes,  
+        Observation='$observation', Estate='$estate'
+        WHERE ID=$ID";
+      } else{
 
 // Ejecutar una consulta (query) simple
 $sql = "UPDATE food_reservation.reservation 
-          SET DishID=$name_dish, DateReservation= '$reservation_date', NumberDish= $number_dishes,  Observation='$observation'
+          SET DishID=$name_dish, DateReservation= '$reservation_date', NumberDish= $number_dishes,  
+          Observation='$observation'
           WHERE ID=$ID";
 
+          }
 if ($conn->query($sql) === TRUE) {
     // Redireccionar a la página de inicio de sesión
     header("Location: /reservation");
