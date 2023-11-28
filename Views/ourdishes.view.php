@@ -89,7 +89,7 @@
         echo "<td>" ." <a href=/editdish?id=$row[ID]>Edit</a> | 
                       <a href=/deletedish?id=$row[ID] class=table__item__link>Delete</a>" . "</td>";
         }else{
-          echo "<td>" ." <a href=/editdish?id=$row[ID]>Reserve</a>" . "</td>";
+          echo "<td>" ." <a href=/makereservationofdish?id=$row[ID]>Reserve</a>" . "</td>";
         }
         echo "</tr>";
 

@@ -20,6 +20,7 @@ $routes =[
     '/editreservation'=>'controllers/editreservation.php',
     '/inserteditreservation'=>'controllers/insertar_editreservation.php',
     '/deletereservation'=>'controllers/deletereservation.php',
+    '/makereservationofdish'=>'controllers/makereservationofdish.php'
      
 
 ];

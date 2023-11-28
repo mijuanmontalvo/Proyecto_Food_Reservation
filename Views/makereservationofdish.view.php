@@ -20,7 +20,7 @@ $result = $conn->query($sql);
 
 ?>
 
-  <a style="text-align: end; display: inline-block; width: 100%; " href="/reservation"><< Back</a> 
+<a style="text-align: end; display: inline-block; width: 100%; " href="/ourdishes"><< Back</a> 
 
 
 <br>
@@ -36,7 +36,17 @@ $result = $conn->query($sql);
         <!-- Opciones de platos se pueden cargar dinámicamente desde la base de datos -->
         <?php
         // Mostrar las opciones de platos en el select
+
         if ($result->num_rows > 0) {
+            $sql1 = "SELECT ID, Name FROM dish where ID = $ID";
+            $result1 = $conn->query($sql1);
+            if ($result1->num_rows > 0) {
+                $row1 = $result1->fetch_assoc();
+              // echo $row1["Name"];
+            
+            }
+
+            echo '<option value="' . $row1["ID"] . '">' . $row1["Name"] . '</option>';
             while ($row = $result->fetch_assoc()) {
                 echo '<option value="' . $row["ID"] . '">' . $row["Name"] . '</option>';
             }
