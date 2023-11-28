@@ -150,6 +150,8 @@ if ($result1->num_rows > 0) {
     <label for="cantidad">Number of dishes:</label><br>
     <input type="number" id="number_dishes" name="number_dishes" min="1" value="<?php echo $NumberDish;?>" required><br><br>
 
+    <label for="observacion">Observation:</label><br>
+    <textarea id="observation" name="observation" rows="4" cols="50"><?php echo $Observation;?></textarea><br><br>
 
     <input type="submit" value="Update Reservation">
 </form>
