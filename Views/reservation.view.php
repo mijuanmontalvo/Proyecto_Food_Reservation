@@ -120,8 +120,11 @@ if ($result->num_rows > 0) {
     echo "<td>" . $row['Estate'] . "</td>";
 
 
+     /* echo "<td>" ." <a href=/editreservation?id=$row[ID]>Edit</a> | 
+      <a href=/deletereservation?id=$row[ID] class=table__item__link>Delete</a>" . "</td>";*/
+
       echo "<td>" ." <a href=/editreservation?id=$row[ID]>Edit</a> | 
-      <a href=/deletereservation?id=$row[ID] class=table__item__link>Delete</a>" . "</td>";
+      <a href='#' onclick='confirmarEliminacion({$row['ID']});' class=table__item__link>Delete</a>" . "</td>";
     
     echo "</tr>";
 
@@ -137,7 +140,14 @@ $conn->close();
 </table>
 
 </section>
-
+<script>
+    function confirmarEliminacion(id) {
+        var confirmacion = confirm("Are you sure you want to delete this record?");
+        if (confirmacion) {
+            window.location.href = "/deletereservation?id=" + id;
+        }
+    }
+</script>
   <!-- Footer -->
 
     <!-- Contact Info -->
