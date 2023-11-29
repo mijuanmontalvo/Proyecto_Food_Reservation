@@ -9,6 +9,7 @@
 <body>
 <div class="login-container">
     <form action="/controllers/insertar_cuenta.php" method="post">
+    <h2>Food-Reservation</h2>
     <div class="divimage">
             <img src="images/logo2.png" alt="MAR logo" class="logo">
             </div>
