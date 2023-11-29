@@ -17,7 +17,7 @@ $sql = "INSERT INTO food_reservation.dish (Name, Description, Price, Image)
 if ($conn->query($sql) === TRUE) {
     // Redireccionar a la página de inicio de sesión
 
-    header("Location: /manageourdishes");
+    header("Location: /ourdishes");
     echo "exito";
     exit();
   } else {

@@ -86,8 +86,11 @@
         echo "<td><img src='data:image/jpeg;base64," . base64_encode($row['image']) . "'/></td>";
 
         if ($_SESSION['UserType']=="Kitchen"){
-        echo "<td>" ." <a href=/editdish?id=$row[ID]>Edit</a> | 
-                      <a href=/deletedish?id=$row[ID] class=table__item__link>Delete</a>" . "</td>";
+       /* echo "<td>" ." <a href=/editdish?id=$row[ID]>Edit</a> | 
+                      <a href=/deletedish?id=$row[ID] class=table__item__link>Delete</a>" . "</td>";*/
+                      echo "<td>" ." <a href=/editdish?id=$row[ID]>Edit</a> | 
+                      <a href='#' onclick='confirmarEliminacion({$row['ID']});' class=table__item__link>Delete</a>" . "</td>";
+
         }else{
           echo "<td>" ." <a href=/makereservationofdish?id=$row[ID]>Reserve</a>" . "</td>";
         }
@@ -106,6 +109,15 @@
 
   </section>
 
+
+  <script>
+    function confirmarEliminacion(id) {
+        var confirmacion = confirm("Are you sure you want to delete this record?");
+        if (confirmacion) {
+            window.location.href = "/deletedish?id=" + id;
+        }
+    }
+</script>
   <!-- Footer -->
 <!-- Contact Info -->
 <?php //require('partials/footer.contact.php')?>
